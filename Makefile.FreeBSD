@@ -1,0 +1,21 @@
+
+CC = gcc
+CFLAGS = -ggdb -O2 -std=c99 -DFREEBSD
+
+all: MatrixMultiplication MatrixMultiplicationOpt
+
+MatrixMultiplication: MatrixMultiplication.o
+	$(CC) -o $@ MatrixMultiplication.o
+
+MatrixMultiplication.o: MatrixMultiplication.c
+	$(CC) -c $< -o $@ $(CFLAGS)
+
+MatrixMultiplicationOpt: MatrixMultiplicationOpt.o
+	$(CC) -o $@ MatrixMultiplicationOpt.o
+
+MatrixMultiplicationOpt.o: MatrixMultiplicationOpt.c
+	$(CC) -c $< -o $@ $(CFLAGS)
+
+clean:
+	rm -f *.o MatrixMultiplication MatrixMultiplicationOpt
+
