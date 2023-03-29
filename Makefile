@@ -5,9 +5,9 @@
 #   make
 #     build all with Intel oneAPI tools and libraries
 
-ONE_API_DIR=/opt/intel/oneapi
-COMP_VER=2022.1.0
-ICX_VER=2022.2.0
+ONE_API_DIR=/apps/u/opt/compilers/oneapi/2023.0
+COMP_VER=2023.0.0
+ICX_VER=2023.0.0
 ICC=$(ONE_API_DIR)/compiler/$(COMP_VER)/linux/bin/intel64/icc
 ICPC=$(ONE_API_DIR)/compiler/$(COMP_VER)/linux/bin/intel64/icpc
 ICPX=$(ONE_API_DIR)/compiler/$(ICX_VER)/linux/bin/icpx

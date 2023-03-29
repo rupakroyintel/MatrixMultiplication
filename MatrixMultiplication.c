@@ -75,7 +75,7 @@ int matrix_multiply(int loop_count, int m, int p, int n)
     C[i] = 0.0;
 
   //printf (" First matrix product using triple nested loop \n\n");
-  for (i = 0; i < m; i++)
+  /*for (i = 0; i < m; i++)
   {
 #if OPT
     for (k = 0; k < p; k++)
@@ -93,7 +93,7 @@ int matrix_multiply(int loop_count, int m, int p, int n)
       C[n*i+j] = sum;
     }
   }
-
+*/
   //printf (" Measuring performance of matrix product using triple nested loop \n\n");
   gettimeofday(&start, NULL);
 
@@ -126,7 +126,7 @@ int matrix_multiply(int loop_count, int m, int p, int n)
 
   printf("===== Matrix multiplication is completed =====\n"
          "===== %u iterations in %ld milliseconds (%f) =====\n\n",
-         loop_count, total_time, C[1]);
+         loop_count, total_time, sum);
 
   free(A);
   free(B);
