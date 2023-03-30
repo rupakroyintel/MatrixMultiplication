@@ -34,7 +34,7 @@
 
 // Consider adjusting LOOP_COUNT based on the performance of your computer
 // to ensure that total run time is at least 1 second
-#define LOOP_COUNT 2
+#define LOOP_COUNT 6
 
 // matrix_muliply multiplies m x p and p x n matrices
 int matrix_multiply(int loop_count, int m, int p, int n)
@@ -75,7 +75,7 @@ int matrix_multiply(int loop_count, int m, int p, int n)
     C[i] = 0.0;
 
   //printf (" First matrix product using triple nested loop \n\n");
-  /*for (i = 0; i < m; i++)
+  for (i = 0; i < m; i++)
   {
 #if OPT
     for (k = 0; k < p; k++)
@@ -93,7 +93,7 @@ int matrix_multiply(int loop_count, int m, int p, int n)
       C[n*i+j] = sum;
     }
   }
-*/
+
   //printf (" Measuring performance of matrix product using triple nested loop \n\n");
   gettimeofday(&start, NULL);
 
@@ -183,4 +183,3 @@ int main(int argc, char** argv)
 
   return (displayUsage == 0) ? matrix_multiply(loop_count, m, p, n) : 0;
 }
-
